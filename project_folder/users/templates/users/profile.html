@@ -3,6 +3,7 @@
 
 
 {%block content%}
+
 <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
@@ -16,8 +17,10 @@
                 <!-- Contact Section Form-->
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                      <h3>Username: {{user.username}}</h3>
-                      <h3>Email: {{user.email}}</h3>
+                        <p>{{user.profile.image.url}}</p>
+                        <img src="{{user.profile.image.url}}" class="rounded-circle account-img">
+                      <h3>{{user.username}}</h3>
+                        <p>{{user.email}}</p>
                     </div>
                 </div>
             </div>
