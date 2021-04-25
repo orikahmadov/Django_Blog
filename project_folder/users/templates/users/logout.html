@@ -1,0 +1,15 @@
+{%extends  'app/base.html'%}
+
+
+{%block content%}
+{{content.super}}
+<div class="jumbotron text-center mt-5">
+  <h3>You logged out</h3>
+  <span><p>Would you like to login? <a href="{%url 'login'%}" class="font-weight-bolder" style="color : blue;">
+    Login</a></p></span>
+</div>
+{%endblock%}
+
+
+
+

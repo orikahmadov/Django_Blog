@@ -1,0 +1,38 @@
+{%extends  'app/base.html'%}
+{% load crispy_forms_tags %}
+
+{%block content%}
+<section class="page-section mt-4" id="contact">
+    <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Login</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <form id="contactForm" name="form" method = "POST">
+                            {%csrf_token%}
+                             {{ form|crispy }}
+                            <br />
+                            <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Register</button></div>
+                        </form>
+                        <div> <span>Don't have an account? <a href="{%url 'register'%}" class="font-weight-bolder" style="color : blue;">Register</a></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</section>
+{%endblock%}
+
+
+
+
+{%block footer%}
+{%endblock%}
+
